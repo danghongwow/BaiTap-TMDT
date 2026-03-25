@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoxShoes - Giao diện Web Bán Giày</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset CSS cơ bản */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #FFFFFF; 
+            color: #111111; 
+            display: flex; 
+            justify-content: center; 
+        }
+        .container { 
+            width: 1440px; 
+            min-height: 1024px;
+            background: #FFFFFF;
+            position: relative;
+            padding-bottom: 60px;
+        }
+
+        /* 1. Header & Điều hướng */
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 30px 48px; 
+        }
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area img { height: 48px; width: auto; }
+        .brand-name { font-size: 48px; font-weight: 400; }
+        
+        .tool-icons { display: flex; gap: 24px; }
+        .tool-icons img { width: 28px; height: 28px; cursor: pointer; }
+
+        /* 2. Menu Ngang */
+        .menu-bar { 
+            background: #EAEAEA; 
+            display: flex; 
+            justify-content: center; 
+            gap: 80px; 
+            padding: 16px 0; 
+            margin: 0 120px; 
+        }
+        .menu-bar a { 
+            text-decoration: none; 
+            color: #111111; 
+            font-size: 20px; 
+            font-weight: 500;
+        }
+
+        /* 3. Tiêu điểm (Spotlight) */
+        .spotlight { text-align: center; margin: 60px 0 50px; }
+        .spotlight h1 { font-size: 48px; font-weight: 400; margin-bottom: 12px; }
+        .spotlight p { font-size: 18px; color: #333333; }
+
+        /* 4. Lưới Sản phẩm (CSS Grid) */
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 24px; 
+            padding: 0 120px; 
+            margin-bottom: 80px;
+        }
+        .product-item { text-align: left; }
+        .image-box { 
+            background: #EAEAEA; 
+            padding: 24px; 
+            margin-bottom: 16px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .image-box img { width: 144px; height: 144px; object-fit: contain; }
+        .product-name { font-size: 20px; margin-bottom: 6px; font-weight: 400;}
+        .product-price { font-size: 20px; font-weight: 400; }
+
+        /* 5. Footer & Liên hệ */
+        .footer { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-end; 
+            padding: 0 48px; 
+        }
+        .contact-info p { font-size: 16px; line-height: 1.8; }
+        .social-icons { display: flex; gap: 16px; }
+        .social-icons img { width: 40px; height: 40px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="header">
+        <div class="logo-area">
+            <img src="game-icons_fox-tail.png" alt="Fox Logo"> <div class="brand-name">FoxShoes</div>
+        </div>
+        <div class="tool-icons">
+            <img src="material-symbols-light_search-rounded.png" alt="Search">
+            <img src="ion_bag.png" alt="Cart">
+            <img src="solar_user-outline.png" alt="User">
+            <img src="mdi-light_heart.png" alt="Wishlist">
+        </div>
+    </div>
+
+    <div class="menu-bar">
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Women</a>
+        <a href="#">New & Featured</a>
+        <a href="#">Sale</a>
+    </div>
+
+    <div class="spotlight">
+        <h1>SPOTLIGHT</h1>
+        <p>Phom dáng cổ điển hòa quyện cùng công nghệ tiên tiến – bệ phóng vững chắc cho mọi màn trình diễn của bạn.</p>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-item">
+            <div class="image-box"><img src="image 1.png" alt="Shoe"></div>
+            <div class="product-name">FoxStep 1 Low</div>
+            <div class="product-price">3,239,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 2.png" alt="Shoe"></div>
+            <div class="product-name">Urban Fox</div>
+            <div class="product-price">2,419,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 3.png" alt="Shoe"></div>
+            <div class="product-name">Arctic Fox 1</div>
+            <div class="product-price">2,419,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 4.png" alt="Shoe"></div>
+            <div class="product-name">CloudTail Plus</div>
+            <div class="product-price">3,519,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 5.png" alt="Shoe"></div>
+            <div class="product-name">SwiftFox Premium</div>
+            <div class="product-price">3,519,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 6.png" alt="Shoe"></div>
+            <div class="product-name">AeroFox Dash</div>
+            <div class="product-price">2,929,000₫</div>
+        </div>
+
+        <div class="product-item">
+            <div class="image-box"><img src="image 7.png" alt="Shoe"></div>
+            <div class="product-name">Vixen Leap</div>
+            <div class="product-price">3,639,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 8.png" alt="Shoe"></div>
+            <div class="product-name">RetroTail</div>
+            <div class="product-price">3,219,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 9.png" alt="Shoe"></div>
+            <div class="product-name">IronFox 10</div>
+            <div class="product-price">2,619,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 10.png" alt="Shoe"></div>
+            <div class="product-name">BounceTail</div>
+            <div class="product-price">3,939,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 11.png" alt="Shoe"></div>
+            <div class="product-name">Fox Max DN</div>
+            <div class="product-price">3,419,000₫</div>
+        </div>
+        <div class="product-item">
+            <div class="image-box"><img src="image 12.png" alt="Shoe"></div>
+            <div class="product-name">FoxZoom 6</div>
+            <div class="product-price">6,239,000₫</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact-info">
+            <p>GỌI MUA HÀNG ONLINE (08:00 - 21:00 mỗi ngày)<br>
+            0909.369.369</p>
+            <p style="margin-top: 10px;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)<br>
+            1800 369 369</p>
+        </div>
+        <div class="social-icons">
+            <img src="logos_facebook.png" alt="Facebook">
+            <img src="skill-icons_instagram.png" alt="Instagram">
+            <img src="logos_tiktok-icon.png" alt="Tiktok">
+            <img src="simple-icons_shopee.png" alt="Shopee">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
